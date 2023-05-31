@@ -73,7 +73,7 @@ function Nav() {
 
       {/* mobile nav */}
       <div className="sm:hidden flex relative">
-        {console.log(session)}
+        {/* {console.log(session)} */}
         {session?.user ? (
           <div className="flex">
             <Image
