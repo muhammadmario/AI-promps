@@ -7,7 +7,6 @@ import PrompCard from "./PrompCard";
 const PrompCardList = ({ data, handleTagClick }) => {
   return (
     <div className="mt-16 prompt_layout">
-      {data && console.log(data)}
       {data &&
         data.map((post) => (
           <PrompCard
@@ -29,6 +28,7 @@ function Feed() {
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await fetch("/api/prompt");
+      console.log(response);
       const data = await response.json();
       console.log(data);
       setPosts(data);
